@@ -1,0 +1,77 @@
+﻿@model GymPoints.Models.Usuario
+@{
+    ViewBag.Title = "Perfil";
+    Layout = "~/Views/Shared/_LayoutPerfil.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-user">
+                <div class="image">
+                    <img src="/Content/assets/img/sidebar-2.jpg" />
+                </div>
+                <div class="content">
+                    <div class="author">
+                        <img class="avatar border-gray" src="/Content/assets/img/man.png" alt="..." />
+                        <h4 class="title">
+                            @Html.DisplayFor(m => m.Nome)<br />
+                            <small>@Html.DisplayFor(m => m.Academia)</small>
+                        </h4>
+                    </div>
+                    <p class="description text-center">
+                        Você possui <span>@Html.DisplayFor(m => m.Pontos)</span> pontos !
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Cadastrar Token</h4>
+                </div>
+                <div class="content">
+                    <form>
+                        <div class="form-group">
+                            <label>Token</label>
+                            <input type="text" class="form-control" placeholder="Token" />
+                        </div>
+                        <button class="btn btn-info btn-fill">Adicionar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Presenças</h4>
+                </div>
+                <div class="content table-responsive table-full-width">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Pontos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.Frequencias != null)
+                            {
+                            foreach (var item in Model.Frequencias)
+                            {
+                            <tr>
+                                <td>@Html.DisplayFor(mi => item.Data)</td>
+                                <td>25 Pontos</td>
+                            </tr>
+                            }
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

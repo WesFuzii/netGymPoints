@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Loja";
+    Layout = "~/Views/Shared/_LayoutPerfil.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Produtos</h4>
+                </div>
+                <div class="content table-responsive table-full-width">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Descrição</th>
+                                <th>Preço</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Uber</td>
+                                <td>Desconto de 10% em viagens</td>
+                                <td>50 pontos</td>
+                                <td>
+                                    <button class="btn btn-info btn-fill" onclick="msgAlerta()">Comprar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ifood</td>
+                                <td>Desconto de 10% em compras</td>
+                                <td>50 pontos</td>
+                                <td>
+                                    <button class="btn btn-info btn-fill" onclick="msgAlerta()">Comprar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Starbucks</td>
+                                <td>Desconto de 10% em bebidas</td>
+                                <td>50 pontos</td>
+                                <td>
+                                    <button class="btn btn-info btn-fill" onclick="msgAlerta()">Comprar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

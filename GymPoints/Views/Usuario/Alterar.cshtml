@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewBag.Title = "Alterar Dados";
+    Layout = "~/Views/Shared/_LayoutPerfil.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Perfil</h4>
+                </div>
+                <div class="content">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Academia</label>
+                                    <input type="text" class="form-control" disabled placeholder="Academia" name="academia" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>CPF</label>
+                                    <input type="text" class="form-control" disabled placeholder="CPF" name="cpf" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Nome</label>
+                                    <input type="text" class="form-control" placeholder="Nome" name="nome" />
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>Idade</label>
+                                    <input type="text" class="form-control" placeholder="Idade" name="idade" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>E-mail</label>
+                                    <input type="text" class="form-control" placeholder="E-mail" name="email" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Senha</label>
+                                    <input type="text" class="form-control" placeholder="Senha" name="senha" />
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-info btn-fill">Atualizar</button>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Trocar Academia</h4>
+                </div>
+                <div class="content table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Academia X</td>
+                                <td>
+                                    <button class="btn btn-warning btn-fill" onclick="">Trocar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Academia Y</td>
+                                <td>
+                                    <button class="btn btn-warning btn-fill" onclick="">Trocar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Academia Z</td>
+                                <td>
+                                    <button class="btn btn-warning btn-fill" onclick="">Trocar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button class="btn btn-danger btn-fill" onclick="">Excluir Conta</button>
+    </div>
+
+</div>

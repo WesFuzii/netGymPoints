@@ -1,0 +1,59 @@
+﻿@model GymPoints.Models.Usuario
+
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100 p-t-85 p-b-20">
+            @using (Html.BeginForm(new { @class = "login100-form" }))
+            {        
+                <span class="login100-form-avatar">
+                    <img src="/Content/assets/img/man.png" alt="" />
+                </span>
+
+                <div class="wrap-input100 m-t-85 m-b-35">
+                    @Html.TextBoxFor(m => m.Nome, new { @class = "input100" })
+                    <span class="focus-input100" data-placeholder="Nome"></span>
+                </div>
+
+                <div class="wrap-input100 m-b-35">
+                    @Html.TextBoxFor(m => m.Idade, new { @class = "input100" })
+                    <span class="focus-input100" data-placeholder="Idade"></span>
+                </div>
+
+                <div class="wrap-input100 m-b-35">
+                    @Html.TextBoxFor(m => m.Cpf, new { @class = "input100" })
+                    <span class="focus-input100" data-placeholder="CPF"></span>
+                </div>
+
+                <div class="wrap-input100 m-b-35">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "input100" })
+                    <span class="focus-input100" data-placeholder="E-mail"></span>
+                </div>
+
+                <div class="wrap-input100 m-b-35">
+                    @Html.TextBoxFor(m => m.Senha, new { @class = "input100" })
+                    <span class="focus-input100" data-placeholder="Senha"></span>
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" type="submit">
+                        Cadastrar
+                    </button>
+                </div>
+
+                <ul class="login-more p-t-100">
+                    <li>
+                        <span class="txt1">
+                            Já é membro?
+                        </span>
+
+                        @Html.ActionLink("Entrar", "Index", new { area = "" }, new { @class = "txt2" })
+                    </li>
+                </ul>
+            }
+        </div>
+    </div>
+</div>
