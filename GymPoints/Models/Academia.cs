@@ -5,13 +5,13 @@ using System.Web;
 
 namespace GymPoints.Models
 {
-    public class Frequencia
+    public class Academia
     {
-        public String Data { get; set; }
+        public String Nome { get; set; }
 
-        public Frequencia(String data)
+        public Academia(String nome)
         {
-            Data = data;
+            Nome = nome;
         }
     }
 }

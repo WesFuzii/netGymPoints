@@ -20,8 +20,10 @@ namespace GymPoints.Controllers
             return View(aux);
         }
 
-        public ActionResult Alterar()
+        public async Task<ActionResult> Alterar()
         {
+            List<Academia> academias = await AcademiaBusiness.getAcademias();
+            ViewBag.academias = academias;
             return View();
         }
 
